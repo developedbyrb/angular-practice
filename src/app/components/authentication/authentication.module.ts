@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { AuthenticationRoutingModule } from './authentication-routing.module';
 import { AuthenticationComponent } from './authentication.component';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -11,7 +13,10 @@ import { AuthenticationComponent } from './authentication.component';
   ],
   imports: [
     CommonModule,
-    AuthenticationRoutingModule
+    AuthenticationRoutingModule,
+    SharedModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class AuthenticationModule { }

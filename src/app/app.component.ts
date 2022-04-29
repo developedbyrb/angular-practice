@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Home';
+  activeUser: boolean = false;
+
+  ngOnInit() {
+    const token = localStorage.getItem('token');
+    if (token !== null) {
+        this.activeUser = true;
+    } else {
+        this.activeUser = false;
+    }
+  }
 }
